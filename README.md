@@ -15,6 +15,14 @@ When the internet “feels slow,” you want quick evidence. This repo gives you
 
 ## Example Graphs
 
+**Throughput (Mbps)**
+<br>
+<img width="640" height="480" alt="Image" src="https://github.com/user-attachments/assets/d3c7c3be-ed03-46ec-ba73-ba7b2345b48e" />
+
+**Ping (ms)**
+<br>
+<img width="640" height="480" alt="Image" src="https://github.com/user-attachments/assets/da0b726c-9c96-4960-8995-cbb817d7ba26" />
+
 
 ## What’s inside
 - `data_fetch.py` — collects metrics every N seconds and appends to `net_metrics.csv`.
@@ -46,6 +54,17 @@ timestamp,download_mbps,upload_mbps,ping_ms
 ```bash
 python plot_simple.py
 ```
+---
+
+## CSV schema
+
+| column          | meaning                              |
+| --------------- | ------------------------------------ |
+| `timestamp`     | ISO time of the measurement          |
+| `download_mbps` | download speed (megabits per second) |
+| `upload_mbps`   | upload speed (megabits per second)   |
+| `ping_ms`       | latency to `8.8.8.8` (milliseconds)  |
+
 
 
 
